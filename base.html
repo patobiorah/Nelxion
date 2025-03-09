@@ -1,0 +1,47 @@
+<DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <style>
+        header{
+            position: fixed;
+            top:0px;
+            left:0px;
+            width:100%;
+            background:#1E1670;
+            padding:35px;
+            justify-content: space-between;
+            align-content: center;
+            align-items: center;
+            display: flex;
+            z-index: 1000;
+        }
+        header h2{
+            color: white;
+            font-size: 26px;
+        }
+        header nav a{
+          color: white;
+          font-size:26px;
+          text-decoration: none;
+          margin-right:46px;
+          font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Regina</h2>
+        <nav>
+            <a href='/'>Home</a>
+            <a href='/about'>About</a>
+            <a href='/portal'>Portal</a>
+            <a href='/support'>Support</a>
+        </nav>
+    </header>
+    {% block content %}
+        
+    {% endblock %}
+</body>
+</html>
+</DOCTYPE html>

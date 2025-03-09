@@ -1,0 +1,36 @@
+<DOCTYPE html>
+<html>
+<head>
+    <title>Form slip</title>
+    <style>
+        body{
+            background:#F0F0F0;
+            padding:30px;
+        }
+        
+        iframe{
+            width:100%;
+            height:100%;
+            
+        }
+    </style>
+</head>
+<body>
+    <iframe src='' id='frame' type='application/pdf'>{{url_for('static',filename='form.pdf')}}</iframe>
+    <button id='danload'>Download</button>
+    
+    <script>
+        url= "{{url_for('static',filename='form.pdf')}}";
+        document.getElementById('frame').src=url;
+        
+        document.getElementById('danload').addEventListener('click',function(e){
+            var link=document.createElement('a');
+            link.href=url;
+            link.download='form.pdf';
+            link.click();
+        });
+        
+    </script>
+</body>
+</html>
+</DOCTYPE html>

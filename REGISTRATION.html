@@ -1,0 +1,369 @@
+<DOCTYPE html>
+<html>
+<head>
+    <title>registration page</title>
+    <style>
+        body{
+            padding:45px;
+            background:#F0F0F0;
+        }
+        
+        
+        
+        .top{
+            position: relative;
+            margin-top: 10px;
+            margin-bottom: 20px !important;
+            background:transparent;
+            border-radius: 34px;
+            padding:25px;
+            text-align:center;
+        }
+        .top h1{
+            text-align:center;
+            font-size:40px;
+            font-weight:989;
+            color:blue;
+            font-family:monospace;
+        }
+        .top h1 small{
+            text-align:center;
+            font-size:20px;
+            font-weight:209;
+            color:black;
+            font-family:monospace;
+        }
+        
+        
+        
+        .picture{
+            position: relative;
+            margin-top: 10px;
+            margin-bottom: 20px !important;
+            background:white;
+            border-radius: 34px;
+            padding:25px;
+            text-align:center;
+            height:500px;
+        }
+        .picture h1{
+            text-align:center;
+            font-size:40px;
+            font-weight:989;
+            color:blue;
+            font-family:monospace;
+        }
+        .picture button{
+            text-align:center;
+            font-size:20px;
+            font-weight:209;
+            color:black;
+            font-family:monospace;
+        }
+        .picture img{
+            border-radius:50%;
+            width:260px;
+            height:260px
+        }
+        
+        .picture input{
+            
+            text-align:center;
+            height:45px;
+            font-size:43px;
+            color:white !important;
+            background:#11E1670 !important;
+            margin-top:20px;
+        }
+        
+        
+        
+        .personal_info{
+            position: relative;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            background:white;
+            border-radius: 34px !important;
+            padding:25px;
+        }
+        .personal_info h2{
+            text-align:center;
+            font-size:60px;
+            font-weight:879;
+            color:blue;
+            font-family:monospace;
+        }
+        .personal_info label{
+           font-size:49px;
+           font-weight:400;
+           color:#1E1670;
+           margin-top:35px;
+           margin-bottom:7px;
+        }
+        .personal_info input{
+           width:100%;
+           height:100px;
+           outline:none;
+           border:3px solid #1E1670;
+           background:white !important;
+           border-radius:26px;
+           color:#1E1670;
+           font-size:50px;
+           margin-bottom: 40px;
+        }
+        .education_info{
+            position: relative;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            background:white;
+            border-radius: 34px !important;
+            padding:25px;
+        }
+        
+        
+        .education_info h2{
+            text-align:center;
+            font-size:60px;
+            font-weight:879;
+            color:blue;
+            font-family:monospace;
+        }
+        .education_info label{
+           font-size:49px;
+           font-weight:400;
+           color:#1E1670;
+           margin-top:35px;
+           margin-bottom:7px;
+        }
+        .education_info input{
+           width:100%;
+           height:100px;
+           outline:none;
+           border:3px solid #1E1670;
+           background:white !important;
+           border-radius:26px;
+           color:#1E1670;
+           font-size:50px;
+           margin-bottom: 40px;
+        }
+        .education_info{
+            position: relative;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            background:white;
+            border-radius: 34px !important;
+            padding:25px;
+        }
+        
+        
+        
+        .Guardian_info{
+            position: relative;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            background:white;
+            border-radius: 34px !important;
+            padding:25px;
+        }
+        .Guardian_info h2{
+            text-align:center;
+            font-size:60px;
+            font-weight:879;
+            color:blue;
+            font-family:monospace;
+        }
+        .Guardian_info label{
+           font-size:49px;
+           font-weight:400;
+           color:#1E1670;
+           margin-top:35px;
+           margin-bottom:7px;
+        }
+        .Guardian_info input{
+           width:100%;
+           height:100px;
+           outline:none;
+           border:3px solid #1E1670;
+           background:white !important;
+           border-radius:26px;
+           color:#1E1670;
+           font-size:50px;
+           margin-bottom: 40px;
+        }
+        
+        
+        
+        .others{
+            position: relative;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            background:white;
+            border-radius: 34px !important;
+            padding:25px;
+        }
+        .others h2{
+            text-align:center;
+            font-size:60px;
+            font-weight:879;
+            color:blue;
+            font-family:monospace;
+        }
+        .others label{
+           font-size:49px;
+           font-weight:400;
+           color:#1E1670;
+           margin-top:35px;
+           margin-bottom:7px;
+        }
+        .others input{
+           width:100%;
+           height:100px;
+           outline:none;
+           border:3px solid #1E1670;
+           background:white !important;
+           border-radius:26px;
+           color:#1E1670;
+           font-size:50px;
+           margin-bottom: 40px;
+        }
+        .others select{
+           width:100%;
+           height:100px;
+           outline:none;
+           border:3px solid #1E1670;
+           background:white !important;
+           border-radius:26px;
+           color:#1E1670;
+           font-size:50px;
+           margin-bottom: 40px;
+        }
+        
+        
+        
+        .btn{
+            position: relative;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            background:transparent;
+            border-radius: 34px !important;
+            padding:25px;
+            text-align:center;
+        }
+        .btn button{
+            width:55%;
+            height:100px;
+            border-radius:38px;
+            background:#1E1670;
+            color:white;
+            font-size:61px;
+            font-weight:820;
+        }
+    </style>
+</head>
+<body>
+  <div class='container'>
+    <form action='/registration' method='post'>
+        <div class='top'>
+            <h1>REGINA CAELI SECONDARY SCHOOL OMOR<br><small>New-Student Registration Form<small></h1><br>
+        </div>
+        
+        
+        
+        <div class='picture'>
+            <h1>UPLOAD PASSPORT</h1> 
+            <img src="{{url_for('static',filename='student.jpeg')}}"><br>
+            <input type='file' name='passport' id='passport' value='',placeholder='upload a passport'>
+        </div>
+        
+        
+        <div class='personal_info'>
+            <h2>PERSONAL INFOMATION</h2><br>
+            <label forsurname >Surname:</label><br>
+            <input type='name' id='name' name='surname' value=''><br>
+            
+            <label forfirstname >First Name:</label><br>
+            <input type='name' id='firstname' name='firstname' value=''><br>
+            
+            <label forlastname >Last Name:</label><br>
+            <input type='name' id='lastname' name='lastname' value=''><br>
+            
+            <label forDOB >Date of birth:</label><br>
+            <input type='date' id='DOB' name='DOB' value=''><br>
+            
+            <label foraddress >Address:</label><br>
+            <input type='name' id='address' name='address' value=''><br>
+            
+            <label forlga >L.G.A of Origin:</label><br>
+            <input type='name' id='lga' name='lga' value=''><br>
+            
+            <label forstate >State of Origin:</label><br>
+            <input type='name' id='state' name='state' value=''><br>  
+        </div>
+        
+        
+        <div class='education_info'>
+            <h2>PREVIOUS EDUCATION INFORMATION</h2><br>
+            
+            <label forprevious_school >Previous School:</label><br>
+            <input type='name' id='previous_school' name='previous_school' value=''><br>
+            
+            <label forschool_address >School Address:</label><br>
+            <input type='name' id='school_address' name='school_address' value=''><br>
+            
+            <label forschool_state >State of the School:</label><br>
+            <input type='name' id='school_state' name='school_state' value=''><br>
+            
+            <label foryr_graduation >Year of Graduation:</label><br>
+            <input type='year' id='yr_graduation' name='yr_graduation' value=''><br>
+            <label forfirst_school>FSLCE/COMM-ENTR Exam Number:</label><br>
+            <input type='name' id='first_school' name='first_school' value=''><br> 
+        </div>
+        
+        
+        <div class='Guardian_info'>
+            <h2>PARENT/GUARDIANCE INFORMATION</h2><br>
+            
+            <label forpgn >Parent/Guardiance Name:</label><br>
+            <input type='name' id='pgn' name='pgn' value=''><br>
+            
+            <label forpgnu >Parent/Guardiance Phone Number:</label><br>
+            <input type='number' id='pgnu' name='pgnu' value=''><br>
+            
+            <label forpgs >Parents/Guardiance State of Resident:</label><br>
+            <input type='name' id='pgs' name='pgs' value=''><br>
+        </div>
+        
+        
+        <div class='others'>
+            <h2>OTHER INFOMATION</h2><br>
+            
+            <label forreferee >Referee:</label><br>
+            <input type='name' id='referee' name='referee' value=''><br>
+            
+            <label forrefereenumb >Referee Phone Number:</label><br>
+            <input type='number' id='refereenumb' name='refereenumb' value=''><br>
+            
+            <label forReg>Registration Mode:</label><br>
+            <select name='Reg'>
+                
+                <option value='None' id='Reg3' name='Reg'></option>
+                <option value='JSS-ENT. Registration' id='Reg1' name='Reg'>JSS-ENT. Registration</option>
+                
+                <option value='SSS-ENT. Registration' id='Reg2' name='Reg'>SSS-ENT. Registration</option>
+            </select>
+            
+            <ul>
+                <li>JSS-ENT: For JSS1</li>
+                <li>SSS-ENT: For SSS1</li>
+            </ul>
+        </div>
+        
+        
+        <div class='btn'>
+            <button id='submit' onclick='document.forms[0].submit()'>SUBMIT</button>
+        </button>
+    </form>
+  </div>
+</body>
+</html>
+</DOCTYPE html>

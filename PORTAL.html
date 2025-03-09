@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block title %}portal page{%endblock%}
+
+
+{% block content%}
+    <style>
+       .container{
+           position:relative;
+           top:140px;
+       }
+       .header{
+           position: relative;
+           margin:32px;
+       }
+       .header h1{
+           font-size:60px;
+           font-weight:770;
+       }
+       .header ul li a{
+           font-size:30px;
+           font-weight:460;
+           text-decoration: none;
+       }
+       
+       .footer{
+           position:fixed;
+           bottom:0px;
+           left:0px;
+           width:100%;
+           text-align: center;
+       }
+       .footer h2{
+           font-size: 18px;
+       }
+    </style>
+    
+    <div class='container'>
+        <div class='header'>
+            <h1>Students</h1>
+            <ul>
+                <li><a href=''>Senior Student</a></li>
+                <li><a href=''>Junior Student</a></li>
+            </ul>
+            
+            
+            <h1>Staffs</h1>
+            <ul>
+                <li><a href=''>Principal office</a></li>
+                <li><a href=''>Teaching Staff</a></li>
+                <li><a href=''>Non Teaching Staffs</a></li>
+            </ul>
+            
+            
+            <h1>New Registration</h1>
+            <ul>
+                <li><a href='/registration'>JSS-ENT/SSS-ENT Registration</a></li>
+                <li><a href=''>Addmission Check</a></li>
+            </ul>
+            
+            
+        </div>
+        
+        <div class='footer'>
+            <h2><i>Allright Regina Caeli Reserve 2025</i></h2>
+        </div>
+    </div>
+{%endblock%}

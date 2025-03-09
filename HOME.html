@@ -1,0 +1,341 @@
+{% extends 'base.html' %}
+
+{% block title%}Home page{% endblock %}
+
+
+{% block content %}
+    <style>
+       .media{
+           position: relative;
+           top:280px;
+           margin-left:60px;
+           margin-right:60px;
+           margin-bottom:56px;
+           border-radius:45px;
+           border: 3px solid #1E1670;
+           z-index: 800;
+       }
+       .media h1{
+           position: absolute;
+           background:black;
+           color: white;
+           text-align:center;
+           top:-80;
+           left:292;
+           padding-left:60px;
+           padding-right: 60px;
+           padding-top: 20px;
+           padding-bottom:20px;
+           border-radius:16px;
+           font-size: 43px;
+           font-weight:750;
+           font-family:monospace;
+           z-index: 795;
+       }
+       .medias{
+           position: relative;
+           padding-top:87px;
+           margin:20px;
+           background: white;
+           z-index: 100;
+           display:flex;
+           gap:20px;
+           padding-bottom:21px;
+           overflow-x: auto;
+           overflow-y: hidden;
+           flex-direction: rows;
+       }
+       .medias div{
+           position:relative;
+           display: flex;
+           gap:35px;
+           
+       }
+       .medias div label{
+           font-size: 20px;
+           color: black;
+           width: 400px;
+       }
+       .medias div img{
+           margin-bottom:30px;
+           height: 300px
+           
+       }
+       .medias div label, .medias div img{
+        flex: 0 0 auto;   
+       }
+       
+       .Accademia{
+         position: relative;
+         top:360px;
+         border-radius:70px;
+         border-top: 4px solid #1F1670;
+         border-bottom: 4px solid #1F1670;
+         margin:34px;
+         padding-bottom: 80px;
+         padding-left:35px;
+         padding-right:35px;
+         padding-top:140px;
+         
+       }
+       .Accademia h1{
+           position:absolute;
+           background: black;
+           color: white;
+           font-size: 45px;
+           font_weight:850;
+           font-family: monospace sanserif;
+           padding:27px;
+           left:320;
+           top:-30;
+           border-bottom-left-radius:30px;
+          border-bottom-right-radius:30px; 
+       }
+       
+       .Accademia div{
+           position: relative;
+           margin-top: 10px;
+           margin-bottom:15px;
+       }
+       .Accademia div img{
+          width:100%;
+          position: relative;
+       }
+       .Accademia div button{
+           position: relative;
+           width:100%;
+           height: 100px;
+           background:black;
+           color:white;
+           font-size:45px;
+           font-weight: 740;
+       }
+       
+       .important{
+           position: relative;
+           top:380px;
+           border: 7px dotted #1E1670;
+           border-radius: 46px;
+           margin:36px;
+           padding:45px;
+       }
+       .important .discovery{
+           position: relative;
+           margin-bottom:78px;
+           margin-top:38px;
+           text-align: center;
+       }
+       .important .discovery h2{
+           font-size:45px;
+           font-weight:950;
+           text-align: center;
+       }
+       .important .discovery p{
+           font-size:24px;
+       }
+       .important .discovery img{
+           width:300px;
+           height:300px;
+           border-radius:50%;
+           justify-content:center;
+       }
+       .important .discovery h1{
+           font-size:30px;
+           text-align: center;
+       }
+       
+       
+       
+       .important .mission{
+           position: relative;
+           margin-bottom:35px;
+           margin-top:208px;
+           text-align: center;
+       }
+       .important .mission h1{
+           font-size:45px;
+           font-weight:950;
+           text-align: center;
+       }
+       .important .mission p{
+           font-size:28px;
+       }
+       .important .mission ul{
+           font-size:28px;
+       }
+       .office{
+          position:relative;
+          top:398;
+          margin:40px;
+          text-align: center;
+       }
+       .office .principals{
+           position: relative;
+           margin-top:100px;
+           margin-bottom:45px;
+           margin-left:30px;
+           margin-right:30px;
+       }
+       .office .principals img{
+          width:300px;
+           height:300px;
+           border-radius:50%; 
+       }
+       .office h1{
+           font-weight:980;
+       }
+       .office .principals h1{
+           font-weight:300;
+       }
+       .others{
+           position: relative;
+           top:490;
+           margin-top: 150px;
+           margin-left:40px;
+           margin-right:40px;
+           margin-bottom:40px;
+           text-align: center;
+           border-top:7px dotted #1E1670;
+           border-bottom:7px dotted #1E1670;
+           border-radius:45px;
+           padding-bottom:78px;
+       }
+       .centers{
+           position: relative;
+           padding:58px;
+           border:5px solid #1E1670;
+           border-radius:36px;
+           margin-top:90px;
+           margin-bottom:34px;
+       }
+       .centers img{
+           width:100%;
+       }
+       .centers h1{
+           width:100%;
+       }
+       .centers h1{
+           font-weight:900;
+       }
+       .footer{
+           position:relative;
+           bottom:0px;
+           left:0px;
+           width:100%;
+           height:610px;
+           background:#1E1670;
+           top:550px;
+       }
+    </style>
+    
+    <div class='media'>
+        <h1>press</h1>
+        <div class='medias'>
+          <div>
+            <img src="{{url_for('static',filename='student.jpeg')}}">
+            <label class='header'><b>Notice on 2nd term exam<b><br> 2ND term exam is schesuled to hold from Monday, 16March. 2025 to Fri, 8April. 2025. After this is the school will announce vacation day.</label>
+          </div>
+          
+          <div>
+            <img src="{{url_for('static',filename='student.jpeg')}}">
+            <label class='header'><b>Notice on 2nd term exam<b><br> 2ND term exam is schesuled to hold from Monday, 16March. 2025 to Fri, 8April. 2025. After this is the school will announce vacation day.</label>
+          </div>
+        </div>
+    </div>
+    
+    
+    
+    <div class='Accademia'>
+        <h1>Scopes</h1><br>
+        
+          <div>
+            <img src="{{url_for('static',filename='student.jpeg')}}"><br>
+            <button>SCIENCE & TECHNOLOGY EDUCATION</button>
+          </div>
+          
+          <div>
+            <img src="{{url_for('static',filename='student.jpeg')}}"><br>
+            <button>ARTS & SOCIAL SCIENCE EDUCATION</button>
+          </div>
+          
+          <div>
+            <img src="{{url_for('static',filename='student.jpeg')}}"><br>
+            <button>COMPULSORY EDUCAATION</button>
+          </div>
+          
+          <div>
+            <img src="{{url_for('static',filename='student.jpeg')}}"><br>
+            <button>SPORTS & STUDENT SOCIAL-LIFE</button>
+          </div>
+    </div>
+    
+    
+    
+    <div class='important'>
+        <div class='discovery'>
+            <h2>DISCOVERY</h2>
+            <p><b>REGINA CAELI SECONDARY OMOR,</b> was found out of the need for the society raise moral upright and well behave citizens in the entire society.<br>In the year parish council meeting, Rev. Fr. Azigba emphasises on the need of having a high school where students will learn education, morals, sports and ways to impact changes in our society. He said "On my way to the outsation i found 2 boys who are speaking with pains, that they need a starndard education in Omor as those in more developed cities. i felt bad for the two, and took it up to bring it to life. So i present to u a proposed high school which will be named after the Queen of heaven."</p>
+            <p><b>On</b> the day of 16th march 2001 the foundation of this great school was laid behind the new CKP church building. And accademic and other activities begins on Oct. 9, of that same year.</p>
+            <p><b>On</b> january 6th 2009 the school was moved from its old site to the permanent site now  Adjacent to CSS omor, by Rev. Fr. Noberth Chilobe. </p><br>
+            <img src="{{url_for('static',filename='student.jpeg')}}"><br>
+            <h1>Rev. Fr. Okechukwu Azigba</h1>
+            <h1>FOUNDER</h1>
+        </div>
+        
+        <div class='mission'>
+            <h1>MISSION</h1>
+            <p>The school missions are as follow:</p>
+            <ul>
+                <li>To impact knoledge and raise responsible indigens</li>
+                <li>To raise God fearing generation</li>
+                <li>To breed students that can think deep and bring solutions to the society problems</li>
+                <li>To prepare our young ones for good leadership</li>
+                <li>To foster peace, love, unity, aamong nation through our trained students</li>
+                <li>To make an atmosphere will dreams will be naatured</li>
+               <li>To make our youngs able to compete in global education</li> 
+            </ul>
+        </div>
+    </div>
+    
+    <div class='office'>
+        <h1>Principal Offices</h1>
+        <div class='principals'>
+            <img src="{{url_for('static',filename='student.jpeg')}}"><br>
+            <h1>Rev. Fr. Charles Izuakor</h1>
+            <h1>Director</h1>
+        </div>
+    
+        <div class='principals'>
+            <img src="{{url_for('static',filename='student.jpeg')}}"><br>
+            <h1>Sir. Sylvanus Mocha (Ph.D)</h1>
+            <h1>Principal</h1>
+        </div>
+    
+        <div class='principals'>
+            <img src="{{url_for('static',filename='student.jpeg')}}"><br>
+            <h1>Mrs. Juliet Okafor (M.Edu)</h1>
+            <h1>Dean</h1>
+        </div>
+    </div>
+    
+    
+    <div class='others'>
+        <h1>Other Centers</h1>
+        <div class='centers'>
+            <img src="{{url_for('static',filename='student.jpeg')}}"><br>
+            <h1>St. Catherine Infiminerian Center<br>center for managing student basic heath wihile at school</h1>
+        </div>
+        
+        <div class='centers'>
+            <img src="{{url_for('static',filename='student.jpeg')}}"><br>
+            <h1>St. Thomas Book Shop Center<br>center for selling school accedemic materials</h1>
+        </div>
+    </div>
+    
+    
+    <div class='footer'>
+        
+    </div>
+    
+    
+{% endblock %}
